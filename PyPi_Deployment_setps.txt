@@ -10,7 +10,7 @@ cd "C://PATH//TO//YOUR//FOLDER"
 `pip3 install twine`
 
 4. Then, run the following command:
-`twine upload dist/*`
+`twine upload --repository-url https://test.pypi.org/legacy/ dist/*`
 
 5. You will be asked to provide your username and password. Provide the credentials you used to register to PyPi earlier.
 

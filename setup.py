@@ -20,7 +20,7 @@ def get_requirements(req_file):
 
 
 REQ_DIR = os.path.dirname(os.path.abspath(__file__))
-core_reqs, core_dependency_links = get_requirements(os.path.join(REQ_DIR, "requirements.txt"))
+core_reqs, core_dependency_links = get_requirements(os.path.join(REQ_DIR, "pip-dep/requirements.txt"))
 long_description = read("README.md")
 
 

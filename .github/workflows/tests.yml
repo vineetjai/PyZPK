@@ -31,14 +31,14 @@ jobs:
     - name: Install dependencies
 
       run:    |
-        if [ ${{ runner.os }} == 'ubuntu-latest']; then
+        if [ ${{ matrix.os }} == 'ubuntu-latest']; then
             sudo apt-get update
             python -m pip3 install --upgrade pip3
             hash -r
             pip3 install -r requirements.txt
             pip3 install -r requirements_dev.txt
             python3 setup.py install
-        elif [ ${{ runner.os }} == 'macos-latest']; then
+        elif [ ${{ matrix.os }} == 'macos-latest']; then
             brew update
             python -m pip3 install --upgrade pip3
             hash -r

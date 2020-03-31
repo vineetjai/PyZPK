@@ -5,3 +5,15 @@
 # PyZPK
 
 Python wrapper for open source Zero Proof Knowledge Library
+
+
+## Build libsnark
+
+In Linux
+
+    $ bash build.sh
+
+In MacOS
+
+    bash build_MacOS.sh
+

@@ -25,7 +25,7 @@ jobs:
           python-version: ${{ matrix.python-version }}
       - name: Install dependencies
         run: |
-          if [ '${{ matrix.os }}' == 'ubuntu-latest']
+          if [ ${{ matrix.os }} == ubuntu-latest]
           then
               sudo apt-get update
               python -m pip3 install --upgrade pip3
@@ -33,7 +33,7 @@ jobs:
               pip3 install -r requirements.txt
               pip3 install -r requirements_dev.txt
               python3 setup.py install
-          elif [ '${{ matrix.os }}' == 'macos-latest']
+          elif [ ${{ matrix.os }} == macos-latest]
           then
               brew update
               python -m pip3 install --upgrade pip3
@@ -42,7 +42,6 @@ jobs:
               pip3 install -r requirements_dev.txt
               python3 setup.py install
           else
-          then
               exit 1
           fi
         shell: bash

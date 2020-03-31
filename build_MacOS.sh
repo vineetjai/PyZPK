@@ -9,11 +9,13 @@ brew list gcc || brew install gcc
 # Removing old directory
 rm -rf libsnark
 
-# Update libsnark in order to pull down the files.
-git submodule update libsnark
+# Update,Sync,Initialization of libsnark in order to pull down the files.
+git submodule update --init libsnark
+git submodule sync
+git submodule init
 
 # Reset all submodules
-git submodule foreach --recursive git reset --hard
+# git submodule foreach --recursive git reset --hard
 
 cd libsnark
 mkdir build

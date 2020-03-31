@@ -61,4 +61,5 @@ jobs:
     - name: Run tests
       run: |
         pip3 install coverage
+        pip3 install pytest
         coverage run -m pytest test

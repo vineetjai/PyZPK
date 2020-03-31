@@ -34,13 +34,13 @@ jobs:
         run:    |
           if [ ${{ runner.os }} == 'Linux']; then
               sudo apt-get update
-              python -m pip install --upgrade pip
+              python -m pip3 install --upgrade pip3
               hash -r
               pip3 install -r requirements.txt
               python3 setup.py install
           elif [ ${{ runner.os }} == 'macos-latest']; then
               brew update
-              python -m pip install --upgrade pip
+              python -m pip3 install --upgrade pip3
               hash -r
               pip3 install -r requirements.txt
               python3 setup.py install

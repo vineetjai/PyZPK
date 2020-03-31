@@ -56,7 +56,9 @@ jobs:
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
     - name: Scan for security issues
       run: |
+            pip3 install bandit
             bandit -r syft -ll
     - name: Run tests
       run: |
+        pip3 install coverage
         coverage run -m pytest test

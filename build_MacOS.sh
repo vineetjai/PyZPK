@@ -3,7 +3,8 @@
 cd libsnark
 mkdir build
 cd build
-#Initialization of libsnark
+#Sync & Initialization of libsnark
+git submodule sync
 git submodule init
 # Update libsnark in order to pull down the files.
 git submodule update --init --recursive

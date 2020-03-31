@@ -17,7 +17,6 @@ jobs:
         python-version: [3.5, 3.6, 3.7]
 
     steps:
-<<<<<<< HEAD
     - uses: actions/checkout@v2
     - name: Set up Python ${{ matrix.python-version }}
       uses: actions/setup-python@v1
@@ -41,7 +40,6 @@ jobs:
       run: |
         pip install pytest
         pytest test
-=======
       - uses: actions/checkout@v2
       - name: Set up Python ${{ matrix.python-version }}
         uses: actions/setup-python@v1
@@ -73,4 +71,3 @@ jobs:
       - name: Run tests
         run: |
           coverage run -m pytest test
->>>>>>> upstream/master

@@ -10,10 +10,11 @@ git submodule update --init --recursive
 # Reset all submodules
 git submodule foreach --recursive git reset --hard
 
-brew install cmake
-brew install gmp        
-brew install boost
-brew install gcc
+brew list cmake || brew install cmake
+brew list gmp || brew install gmp
+brew list boost || brew install boost
+brew list gcc || brew install gcc
+
 ln -s /usr/local/opt/openssl/include/openssl /usr/local/include
 cmake -DWITH_PROCPS=OFF -DWITH_SUPERCOP=OFF ..
 
